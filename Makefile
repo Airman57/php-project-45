@@ -1,7 +1,10 @@
-setup: install
+setup: install validate
 
 install:
 	composer install
 
+validate:
+	composer validate
+
 start:
-	php bin/brain-games.php
+	./bin/brain-games

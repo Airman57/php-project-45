@@ -2,6 +2,9 @@
     "name": "hexlet/code",
     "description": "firsthexletproject",
     "type": "project",
+    "bin": [
+        "bin/brain-games"
+    ],
     "authors": [
         {
             "name": "alexandrkonishchev"
