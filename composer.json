@@ -1,0 +1,11 @@
+{
+    "name": "hexlet/code",
+    "description": "firsthexletproject",
+    "type": "project",
+    "authors": [
+        {
+            "name": "alexandrkonishchev"
+        }
+    ],
+    "require": {}
+}
