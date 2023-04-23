@@ -1,18 +1,10 @@
 #!/usr/bin/env php
 
 <?php
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function game\welcome;
 
-echo 'Answer "yes" if the number is even, otherwise answer "no".';
+use function Games\even\Start;
 
-$randomnumber = rand(1,100);
-$ournumber = $randomnumber;
-
-echo "\nQuestion: $ournumber\n";
-$answer = trim(fgets(STDIN));
-
-echo "Your answer: $answer\n";
-
-use function game\question;
+Start();
