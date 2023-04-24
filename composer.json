@@ -9,7 +9,8 @@
     "autoload": {
             "files":[ 
             "src/Cli.php",
-            "src/game.php"
+            "src/engine.php",
+            "src/game.php"            
         ]        
     },
     "authors": [
