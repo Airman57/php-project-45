@@ -10,7 +10,7 @@
             "files":[ 
             "src/Cli.php",
             "src/engine.php",
-            "src/game.php"            
+            "src/Games/even-game.php"            
         ]        
     },
     "authors": [
