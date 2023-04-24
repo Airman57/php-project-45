@@ -4,13 +4,15 @@
     "type": "project",
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "autoload": {
             "files":[ 
             "src/Cli.php",
             "src/engine.php",
-            "src/Games/even-game.php"            
+            "src/Games/even-game.php",
+            "src/Games/calc-game.php"           
         ]        
     },
     "authors": [
