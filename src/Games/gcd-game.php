@@ -19,13 +19,12 @@ function start()
             $cicle = $a;
         } for ($s = $cicle; $s >= 1; $s--) {
             if ($a % $s === 0 && $b % $s === 0) {            
-            $correctanswer = $s;
-              break;
+                $correctanswer = $s;
+                break;
             }
-          }
+        }
         $arrq[] = $question;
         $arra[] = $correctanswer;
     }
     Logic($arra, $arrq, $explanation);
-}
-        
+}       

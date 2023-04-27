@@ -16,16 +16,16 @@ function start()
     $diff1 = rand(1, 5);
     $startnumber2 = rand(1, 50);
     $diff2 = rand(1, 5);
-    for ($i = 1; $i < rand(6, 11); $i++) {     
-        $question = $startnumber0 + ($i * $diff0);      
+    for ($i = 1; $i < rand(6, 11); $i++) {
+        $question = $startnumber0 + ($i * $diff0);
         $str0[] = $question;
     }
     for ($i = 1; $i < rand(6, 11); $i++) {
-        $question = $startnumber1 + ($i * $diff1);    
+        $question = $startnumber1 + ($i * $diff1);
         $str1[] = $question;
     }
     for ($i = 1; $i < rand(6, 11); $i++) {
-        $question = $startnumber2 + ($i * $diff2);     
+        $question = $startnumber2 + ($i * $diff2);
         $str2[] = $question;
     }
     $n0 = count($str0) - 1;

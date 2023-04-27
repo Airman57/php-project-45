@@ -18,9 +18,9 @@ function start()
         $question = "$a $operation $b";
         if ($operation == "-") {
             $correctanswer = $a - $b;
-        }elseif ($operation == "+") {
+        } elseif ($operation == "+") {
             $correctanswer = $a + $b;
-        }elseif ($operation == "*") {
+        } elseif ($operation == "*") {
             $correctanswer = $a * $b;
         }
                 $arrq[] = $question;
