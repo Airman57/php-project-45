@@ -19,7 +19,7 @@ function Logic(array $arra, array $arrq, $explanation)
             line('Correct!');
             $score++;
         } else {
-            line("'$answer' is wrong answer;(. Correct answer '$arra[$i]'\n Let's try again, $name");
+            line("'$answer' is wrong answer;(. Correct answer '$arra[$i]'\n/Let's try again, $name/");
             return;
         }if ($score == 3) {
             line("Congratulations, %s!", $name);
