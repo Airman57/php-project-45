@@ -7,7 +7,8 @@
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
-        "bin/brain-progr"
+        "bin/brain-progr",
+        "bin/brain-prime"
     ],
     "autoload": {
             "files":[ 
@@ -16,7 +17,8 @@
             "src/Games/even-game.php",
             "src/Games/calc-game.php",
             "src/Games/gcd-game.php",
-            "src/Games/progression-game.php"           
+            "src/Games/progression-game.php",
+            "src/Games/prime-game.php"           
         ]        
     },
     "authors": [
