@@ -15,8 +15,5 @@
  #### Progression game
  <a href="https://asciinema.org/a/v0K8SYHjBQPNI370euRO7CgDa" target="_blank"><img src="https://asciinema.org/a/v0K8SYHjBQPNI370euRO7CgDa.svg" /></a>
  #### Prime game
-<<<<<<< HEAD
  <a href="https://asciinema.org/a/FJfPLGZ9T3mpWZShWi0O3Y8dR" target="_blank"><img src="https://asciinema.org/a/FJfPLGZ9T3mpWZShWi0O3Y8dR.svg" /></a>
-=======
- <a href="https://asciinema.org/a/FJfPLGZ9T3mpWZShWi0O3Y8dR" target="_blank"><img src="https://asciinema.org/a/FJfPLGZ9T3mpWZShWi0O3Y8dR.svg" /></a>
->>>>>>> 69f3559 (update readme)
+
