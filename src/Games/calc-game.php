@@ -9,20 +9,20 @@ function start()
     $explanation = 'What is the result of the expression?';
     $arrq = [];
     $arra = [];
-    for ($i = 0; $i < 3; $i++){
+    for ($i = 0; $i < 3; $i++) {
         $operations = ['*', '-', '+'];
-        $number = mt_rand(0,2);
+        $number = mt_rand(0, 2);
         $operation = $operations[$number];
         $a = rand(1, 25);
         $b = rand(1, 25);
         $question = "$a $operation $b";
-        if ($operation == "-"){
+        if ($operation == "-") {
             $correctanswer = $a - $b;
-          }elseif ($operation == "+"){
+        }elseif ($operation == "+") {
             $correctanswer = $a + $b;
-          }elseif ($operation == "*"){
+        }elseif ($operation == "*") {
             $correctanswer = $a * $b;
-          }
+        }
                 $arrq[] = $question;
                 $arra[] = $correctanswer;
     }
