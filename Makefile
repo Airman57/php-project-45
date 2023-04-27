@@ -20,6 +20,6 @@ brain-calc:
 brain-gcd:
 	./bin/brain-gcd
 brain-progression:
-	./bin/brain-progr
+	./bin/brain-progression
 brain-prime:
 	./bin/brain-prime
