@@ -5,7 +5,7 @@ namespace Games\engine;
 use function cli\line;
 use function cli\prompt;
 
-function Logic(array $arra, array $arrq, $explanation)
+function Logic(array $arra, array $arrq, string $explanation)
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');

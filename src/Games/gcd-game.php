@@ -12,6 +12,7 @@ function start()
     for ($i = 0; $i < 3; $i++) {
         $a = rand(1, 100);
         $b = rand(1, 100);
+        $correctanswer = 1;
         $question = "$a $b";
         if ($a > $b) {
             $cicle = $b;

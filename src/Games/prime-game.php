@@ -9,6 +9,7 @@ function start()
     $explanation = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $arra = [];
     $arrq = [];
+    $answer = '';
     for ($a = 0; $a < 3; $a++) {
         $num = rand(1, 100);
         for ($i = 2; $i < $num; $i++) {
