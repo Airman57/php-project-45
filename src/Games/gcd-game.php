@@ -13,9 +13,19 @@ function start()
         $a = rand(1, 100);
         $b = rand(1, 100);
         $question = "$a $b";
-        $correctanswer = gmp_gcd($a, $b);
+        if ($a > $b) {
+            $cicle = $b;
+        } else {
+            $cicle = $a;
+        } for ($s = $cicle; $s >= 1; $s--) {
+            if ($a % $s === 0 && $b % $s === 0) {            
+            $correctanswer = $s;
+              break;
+            }
+          }
         $arrq[] = $question;
         $arra[] = $correctanswer;
     }
     Logic($arra, $arrq, $explanation);
 }
+        
