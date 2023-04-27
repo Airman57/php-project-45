@@ -18,7 +18,7 @@ function start()
         } else {
             $cicle = $a;
         } for ($s = $cicle; $s >= 1; $s--) {
-            if ($a % $s === 0 && $b % $s === 0) {            
+            if ($a % $s === 0 && $b % $s === 0) {
                 $correctanswer = $s;
                 break;
             }
@@ -27,4 +27,4 @@ function start()
         $arra[] = $correctanswer;
     }
     Logic($arra, $arrq, $explanation);
-}       
+}
