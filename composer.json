@@ -7,7 +7,7 @@
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
-        "bin/brain-progr",
+        "bin/brain-progression",
         "bin/brain-prime"
     ],
     "autoload": {
