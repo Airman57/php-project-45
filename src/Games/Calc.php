@@ -15,18 +15,28 @@ function start()
         $a = rand(1, 25);
         $b = rand(1, 25);
         $question = "$a $operation $b";
-        switch ($operation) {
-            case '-':
-                $correctAnswer = $a - $b;
-                break;
-            case '+':
-                $correctAnswer = $a + $b;
-                break;
-            case '*':
-                $correctAnswer = $a * $b;
-                break;
-        }
+        $correctAnswer = calculate($a, $b, $operation);
         $gameData[] = ['question' => $question, 'answer' => $correctAnswer];
     }
     logic($gameData, $explanation);
 }
+
+
+function calculate (int $a, int $b, string $operation)
+{
+$correctAnswer = 0;
+switch ($operation) {
+    case '-':
+        $correctAnswer = $a - $b;
+        break;
+    case '+':
+        $correctAnswer = $a + $b;
+        break;
+    case '*':
+        $correctAnswer = $a * $b;
+        break;
+}
+    return $correctAnswer;
+}
+
+
