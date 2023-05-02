@@ -17,11 +17,11 @@ function start()
             $progression[] = $question;
         }
             $size = count($progression) - 1;
-            $randomsymbol = rand(0, $size);
-            $symbol = $progression[$randomsymbol];
-            $progression[$randomsymbol] = '..';
-            $questionprogression = implode(' ', $progression);
-            $gameData[] = ['question' => $questionprogression, 'answer' => $symbol];
+            $randomSymbol = rand(0, $size);
+            $symbol = $progression[$randomSymbol];
+            $progression[$randomSymbol] = '..';
+            $questionProgression = implode(' ', $progression);
+            $gameData[] = ['question' => $questionProgression, 'answer' => $symbol];
     }
     logic($gameData, $explanation);
 }
