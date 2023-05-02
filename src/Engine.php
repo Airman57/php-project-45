@@ -8,7 +8,7 @@ use function BrainGames\Cli\greeting;
 
 function logic(array $gameData, string $explanation)
 {
-    greeting();
+    $name = greeting();
     line($explanation);
     for ($i = 0; $i < 3; $i++) {
         $question = "Question: " . $gameData[$i]['question'];
