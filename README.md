@@ -1,9 +1,29 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Airman57/php-project-45/workflows/hexlet-check/badge.svg)](https://github.com/Airman57/php-project-45/actions)
  <a href="https://codeclimate.com/github/Airman57/php-project-45/maintainability"><img src="https://api.codeclimate.com/v1/badges/47b14110f4bce1cd6088/maintainability" /></a>
+ 
+ ## Mind Games
+
+ Mind Games is a collection of console games for brain training.Each game asks questions that need to be answered correctly. After three correct answers in a row, congratulations! You won! Don't be upset if you answer incorrectly. The game will show you the correct answer and you can try againю Good luck.
+ #Games:
+
+ * brain-calc. Calculator. Simple arithmetic operations that are waiting for your decision.
+ * brain-prime. Determine if a number is prime.
+ * brain-even. Determine if a number is even.
+ * brain-gcd. Determine greatest common divisor.
+ * brain-progression. Search missing number in progression.
+
+ ## Minimum requirements
+
+ * Console
+ * PHP
+ * Composer
+ 
+ 
  ## Installation
  
-       Make Install
+    Make Install
+* For start game type "make @gamename"
        
  ## Demonstration
  #### Even game
