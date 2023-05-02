@@ -4,11 +4,13 @@ namespace BrainGames\Games\Calc;
 
 use function Games\Engine\logic;
 
+use const Games\Engine\CYCLES;
+
 function start()
 {
     $explanation = 'What is the result of the expression?';
     $gameData = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < CYCLES; $i++) {
         $operations = ['*', '-', '+'];
         $number = mt_rand(0, 2);
         $operation = $operations[$number];
