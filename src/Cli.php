@@ -10,5 +10,4 @@ function greeting()
     line('Welcome to the Brain Game!');
     $user = prompt('May I have your name?');
     line("Hello, %s!", $user);
-    return $user;
 }

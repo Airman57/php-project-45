@@ -4,15 +4,15 @@ namespace BrainGames\Games\Calc;
 
 use function Games\Engine\logic;
 
-use const Games\Engine\CYCLES;
+use const Games\Engine\ROUNDS;
 
 function start()
 {
-    $explanation = 'What is the result of the expression?';
+    $rule = 'What is the result of the expression?';
     $gameData = [];
-    for ($i = 0; $i < CYCLES; $i++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         $operations = ['*', '-', '+'];
-        $number = mt_rand(0, 2);
+        $number = array_rand($operations, 1);
         $operation = $operations[$number];
         $a = rand(1, 25);
         $b = rand(1, 25);
@@ -20,7 +20,7 @@ function start()
         $correctAnswer = calculate($a, $b, $operation);
         $gameData[] = ['question' => $question, 'answer' => $correctAnswer];
     }
-    logic($gameData, $explanation);
+    logic($gameData, $rule);
 }
 
 

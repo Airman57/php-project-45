@@ -4,27 +4,26 @@ namespace Games\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Cli\greeting;
 
-const CYCLES = 3;
+const ROUNDS = 3;
 
-function logic(array $gameData, string $explanation)
+function logic(array $gameData, string $rule)
 {
-    $name = greeting();
-    line($explanation);
-    for ($i = 0; $i < CYCLES; $i++) {
-        $question = "Question: " . $gameData[$i]['question'];
-        $correctAnswer = $gameData[$i]['answer'];
+    line('Welcome to the Brain Game!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
+    line($rule);
+    foreach ($gameData as $value) {
+        $question = "Question: " . $value['question'];
+        $correctAnswer = $value['answer'];
         line($question);
         $answer = prompt("Your answer");
-        if ($answer == $gameData[$i]['answer']) {
+        if ($answer == $correctAnswer) {
             line('Correct!');
         } else {
             line("'$answer' is wrong answer;(. Correct answer '$correctAnswer'\n/Let's try again, $name!/");
             return;
-        }if ($i == CYCLES - 1) {
-            line("Congratulations, %s!", $name);
-            return;
-        }
+        }                  
     }
+    return line("Congratulations, %s!", $name); 
 }

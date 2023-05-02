@@ -4,22 +4,21 @@ namespace BrainGames\Games\Progression;
 
 use function Games\Engine\logic;
 
-use const Games\Engine\CYCLES;
+use const Games\Engine\ROUNDS;
 
 function start()
 {
-    $explanation = 'What number is missing in the progression?';
+    $rule = 'What number is missing in the progression?';
     $gameData = [];
-    for ($a = 0; $a < CYCLES; $a++) {
-        $progression = makeProgression();
-        $size = count($progression) - 1;
-        $randomSymbol = rand(0, $size);
+    for ($a = 0; $a < ROUNDS; $a++) {
+        $progression = makeProgression();        
+        $randomSymbol = rand(0, count($progression) - 1);
         $symbol = $progression[$randomSymbol];
         $progression[$randomSymbol] = '..';
         $questionProgression = implode(' ', $progression);
         $gameData[] = ['question' => $questionProgression, 'answer' => $symbol];
     }
-    logic($gameData, $explanation);
+    logic($gameData, $rule);
 }
 
 function makeProgression()
@@ -28,8 +27,7 @@ function makeProgression()
     $startNumber = rand(1, 50);
     $diff = rand(1, 8);
     for ($i = 1; $i < rand(6, 11); $i++) {
-            $question = $startNumber + ($i * $diff);
-            $progression[] = $question;
+            $progression[] = $startNumber + ($i * $diff);            
     }
     return $progression;
 }

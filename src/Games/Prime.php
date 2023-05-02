@@ -4,30 +4,30 @@ namespace BrainGames\Games\Prime;
 
 use function Games\Engine\logic;
 
-use const Games\Engine\CYCLES;
+use const Games\Engine\ROUNDS;
 
 function start()
 {
-    $explanation = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $gameData = [];
-    for ($a = 0; $a < CYCLES; $a++) {
+    for ($a = 0; $a < ROUNDS; $a++) {
         $num = rand(3, 100);
-        $answer = isPrime($num);
+        $answer = isPrime($num) ? 'yes' : 'no';
         $gameData[] = ['question' => $num, 'answer' => $answer];
     }
-    logic($gameData, $explanation);
+    logic($gameData, $rule);
 }
 
 function isPrime(int $a)
 {
-    $answer = '';
     for ($i = 2; $i < $a; $i++) {
-        if ($a % $i === 0) {
-            $answer = 'no';
+        if ($a % $i !== 0) {
+            return true;
             break;
         } else {
-            $answer = 'yes';
+            return false;
+            break;
         }
     }
-    return $answer;
+    
 }

@@ -16,14 +16,14 @@
 
  ## Minimum requirements
 
- * Console
- * PHP
- * Composer
+ * Make utilite
+ * PHP >= 8.0
+ * Composer >= 2.4.1
  
  
  ## Installation
  
-    Make Install
+    Make install
 * For start game type "make @gamename"
        
  ## Demonstration

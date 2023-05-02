@@ -4,23 +4,25 @@ namespace BrainGames\Games\Even;
 
 use function Games\Engine\logic;
 
-use const Games\Engine\CYCLES;
+use const Games\Engine\ROUNDS;
 
 function start()
 {
-    $explanation = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $rule = 'Answer "yes" if the number is even, otherwise answer "no".';
     $gameData = [];
-    for ($i = 0; $i < CYCLES; $i++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         $randomNumber = rand(1, 100);
-        $correctAnswer = isEven($randomNumber);
+        $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
         $gameData[] = ['question' => $randomNumber, 'answer' => $correctAnswer];
     }
-        logic($gameData, $explanation);
+        logic($gameData, $rule);
 }
 
-function isEven(int $a)
+function isEven(int $number)
 {
-    $even = '';
-    $even = ($a % 2 == 0) ? 'yes' : 'no';
-    return $even;
+    if($number % 2 == 0){
+        return true;
+      }else{
+        return false;
+    }    
 }
