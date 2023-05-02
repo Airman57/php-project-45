@@ -12,7 +12,7 @@ function logic(array $gameData, string $explanation)
     line("Hello, %s!", $name);
     line($explanation);
     for ($i = 0; $i < 3; $i++) {
-        $question = "Question: ".$gameData[$i]['question'];
+        $question = "Question: " . $gameData[$i]['question'];
         $correctAnswer = $gameData[$i]['answer'];
         line($question);
         $answer = prompt("Your answer");

@@ -30,6 +30,6 @@ function getGcd($a, $b)
             $correctAnswer = $s;
             break;
         }
-}
-return $correctAnswer;
+    }
+    return $correctAnswer;
 }

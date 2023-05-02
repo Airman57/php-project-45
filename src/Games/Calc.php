@@ -7,7 +7,7 @@ use function Games\Engine\logic;
 function start()
 {
     $explanation = 'What is the result of the expression?';
-    $gameData = [];    
+    $gameData = [];
     for ($i = 0; $i < 3; $i++) {
         $operations = ['*', '-', '+'];
         $number = mt_rand(0, 2);
@@ -19,14 +19,14 @@ function start()
             case '-':
                 $correctAnswer = $a - $b;
                 break;
-            case '+':        
+            case '+':
                 $correctAnswer = $a + $b;
                 break;
             case '*':
                 $correctAnswer = $a * $b;
                 break;
         }
-    $gameData[] = ['question' => $question, 'answer' => $correctAnswer];
+        $gameData[] = ['question' => $question, 'answer' => $correctAnswer];
     }
     logic($gameData, $explanation);
 }
