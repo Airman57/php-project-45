@@ -5,7 +5,8 @@
  ## Mind Games
 
  Mind Games is a collection of console games for brain training.Each game asks questions that need to be answered correctly. After three correct answers in a row, congratulations! You won! Don't be upset if you answer incorrectly. The game will show you the correct answer and you can try againю Good luck.
- #Games:
+
+ # Games:
 
  * brain-calc. Calculator. Simple arithmetic operations that are waiting for your decision.
  * brain-prime. Determine if a number is prime.
