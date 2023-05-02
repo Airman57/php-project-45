@@ -38,6 +38,3 @@ function calculate(int $a, int $b, string $operation)
     }
     return $correctAnswer;
 }
-
-
-
