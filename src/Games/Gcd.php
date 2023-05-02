@@ -11,7 +11,6 @@ function start()
     for ($i = 0; $i < 3; $i++) {
         $a = rand(1, 100);
         $b = rand(1, 100);
-        $correctAnswer = 1;
         $question = "$a $b";
         $correctAnswer = getGcd($a, $b);
         $gameData[] = ['question' => $question, 'answer' => $correctAnswer];
@@ -19,8 +18,9 @@ function start()
     logic($gameData, $explanation);
 }
 
-function getGcd($a, $b)
+function getGcd(int $a, int $b)
 {
+    $correctAnswer = 0;
     if ($a > $b) {
         $cycle = $b;
     } else {

@@ -16,7 +16,7 @@ function start()
         logic($gameData, $explanation);
 }
 
-function isEven($a)
+function isEven(int $a)
 {
     $even = '';
     $even = ($a % 2 == 0) ? 'yes' : 'no';

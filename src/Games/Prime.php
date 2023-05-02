@@ -16,7 +16,7 @@ function start()
     logic($gameData, $explanation);
 }
 
-function isPrime($a)
+function isPrime(int $a)
 {
     $answer = '';
     for ($i = 2; $i < $a; $i++) {
