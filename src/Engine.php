@@ -22,7 +22,7 @@ function logic(array $gameData, string $explanation)
         } else {
             line("'$answer' is wrong answer;(. Correct answer '$correctAnswer'\n/Let's try again, $name!/");
             return;
-        }if ($i == 2) {
+        }if ($i == CYCLES - 1) {
             line("Congratulations, %s!", $name);
             return;
         }
