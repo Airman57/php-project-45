@@ -18,15 +18,13 @@ function start()
     logic($gameData, $rule);
 }
 
-function isPrime(int $a)
+function isPrime(int $num)
 {
-    for ($i = 2; $i < $a; $i++) {
-        if ($a % $i !== 0) {
-            return true;
-        } else {
+    for ($s = 2; $s < $num; $s++) {
+        if ($num % $s === 0) {
             return false;
             break;
-        }
+        }             
     }
-    
+    return true;    
 }
