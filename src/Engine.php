@@ -23,7 +23,7 @@ function logic(array $gameData, string $rule)
         } else {
             line("'$answer' is wrong answer;(. Correct answer '$correctAnswer'\n/Let's try again, $name!/");
             return;
-        }                  
+        }
     }
-    return line("Congratulations, %s!", $name); 
+    return line("Congratulations, %s!", $name);
 }
