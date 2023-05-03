@@ -21,7 +21,7 @@ function start()
 function isPrime(int $a)
 {
     for ($i = 2; $i < $a; $i++) {
-        if ($a % $i !== 0) {
+        if ($a % $i == 0) {
             return true;
             break;
         } else {
