@@ -37,6 +37,8 @@ function calculate(int $a, int $b, string $operation)
         case '*':
             $correctAnswer = $a * $b;
             break;
+        default:
+            break;
     }
     return $correctAnswer;
 }

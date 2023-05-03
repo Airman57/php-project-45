@@ -27,7 +27,7 @@ function makeProgression()
     $startNumber = rand(1, 50);
     $diff = rand(1, 8);
     for ($i = 1; $i < rand(6, 11); $i++) {
-            $progression[] = $startNumber + ($i * $diff);            
+        $progression[] = $startNumber + $i * $diff;            
     }
     return $progression;
 }
