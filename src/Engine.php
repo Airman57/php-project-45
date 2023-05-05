@@ -15,9 +15,9 @@ function logic(array $gameData, string $rule)
     line($rule);
     foreach ($gameData as $value) {
         $question = "Question: " . $value['question'];
-        $correctAnswer = $value['answer'];
+        $correctAnswer = (string)$value['answer'];
         line($question);
-        $answer = (int)prompt("Your answer");
+        $answer = prompt("Your answer");
         if ($answer !== $correctAnswer) {
             line("'$answer' is wrong answer;(. Correct answer '$correctAnswer'\n/Let's try again, $name!/");
             return;
