@@ -17,13 +17,12 @@ function logic(array $gameData, string $rule)
         $question = "Question: " . $value['question'];
         $correctAnswer = $value['answer'];
         line($question);
-        $answer = prompt("Your answer");
-        if ($answer == $correctAnswer) {
-            line('Correct!');
-        } else {
+        $answer = (int)prompt("Your answer");
+        if ($answer !== $correctAnswer) {
             line("'$answer' is wrong answer;(. Correct answer '$correctAnswer'\n/Let's try again, $name!/");
             return;
         }
+        line('Correct!');
     }
-    return line("Congratulations, %s!", $name);
+    line("Congratulations, %s!", $name);
 }

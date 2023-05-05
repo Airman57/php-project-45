@@ -10,7 +10,7 @@ function start()
 {
     $rule = 'Find the greatest common divisor of given numbers.';
     $gameData = [];
-    for ($i = 0; $i < ROUNDS; $i++) {
+    for ($i = 0; $i < ROUNDS; $i += 1) {
         $firstNumber = rand(1, 100);
         $secondNumber = rand(1, 100);
         $question = "$firstNumber $secondNumber";
@@ -22,9 +22,9 @@ function start()
 
 function getGcd(int $firstNumber, int $secondNumber)
 {
-    $correctAnswer = 0;
+    $correctAnswer = 1;
     $minority = min($firstNumber, $secondNumber);
-    for ($s = $minority; $s >= 1; $s--) {
+    for ($s = $minority; $s >= 1; $s -= 1) {
         if ($firstNumber % $s === 0 && $secondNumber % $s === 0) {
             $correctAnswer = $s;
             break;

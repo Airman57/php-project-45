@@ -10,8 +10,8 @@ function start()
 {
     $rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $gameData = [];
-    for ($a = 0; $a < ROUNDS; $a++) {
-        $num = rand(3, 100);
+    for ($a = 0; $a < ROUNDS; $a += 1) {
+        $num = rand(1, 100);
         $answer = isPrime($num) ? 'yes' : 'no';
         $gameData[] = ['question' => $num, 'answer' => $answer];
     }
@@ -20,8 +20,11 @@ function start()
 
 function isPrime(int $num)
 {
-    for ($s = 2; $s < $num; $s++) {
-        if ($num % $s === 0) {
+    if ($num == 1) {
+        return false;
+    }
+    for ($s = 2; $s < $num; $s += 1) {
+        if ($num % $s == 0 && $num !== 2) {
             return false;
         }
     }

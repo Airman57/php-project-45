@@ -10,7 +10,7 @@ function start()
 {
     $rule = 'Answer "yes" if the number is even, otherwise answer "no".';
     $gameData = [];
-    for ($i = 0; $i < ROUNDS; $i++) {
+    for ($i = 0; $i < ROUNDS; $i += 1) {
         $randomNumber = rand(1, 100);
         $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
         $gameData[] = ['question' => $randomNumber, 'answer' => $correctAnswer];
@@ -20,8 +20,5 @@ function start()
 
 function isEven(int $number)
 {
-    if ($number % 2 == 0) {
-        return true;
-    }
-    return false;
+    return $number % 2 == 0;
 }

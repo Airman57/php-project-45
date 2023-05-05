@@ -10,32 +10,32 @@ function start()
 {
     $rule = 'What is the result of the expression?';
     $gameData = [];
-    for ($i = 0; $i < ROUNDS; $i++) {
+    for ($i = 0; $i < ROUNDS; $i += 1) {
         $operations = ['*', '-', '+'];
         $number = array_rand($operations, 1);
         $operation = $operations[$number];
-        $a = rand(1, 25);
-        $b = rand(1, 25);
-        $question = "$a $operation $b";
-        $correctAnswer = calculate($a, $b, $operation);
+        $firstNumber = rand(1, 25);
+        $secondNumber = rand(1, 25);
+        $question = "$firstNumber $operation $secondNumber";
+        $correctAnswer = calculate($firstNumber, $secondNumber, $operation);
         $gameData[] = ['question' => $question, 'answer' => $correctAnswer];
     }
     logic($gameData, $rule);
 }
 
 
-function calculate(int $a, int $b, string $operation)
+function calculate(int $firstNumber, int $secondNumber, string $operation)
 {
     $correctAnswer = 0;
     switch ($operation) {
         case '-':
-            $correctAnswer = $a - $b;
+            $correctAnswer = $firstNumber - $secondNumber;
             break;
         case '+':
-            $correctAnswer = $a + $b;
+            $correctAnswer = $firstNumber + $secondNumber;
             break;
         case '*':
-            $correctAnswer = $a * $b;
+            $correctAnswer = $firstNumber * $secondNumber;
             break;
         default:
             break;

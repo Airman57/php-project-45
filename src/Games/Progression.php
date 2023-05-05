@@ -10,7 +10,7 @@ function start()
 {
     $rule = 'What number is missing in the progression?';
     $gameData = [];
-    for ($a = 0; $a < ROUNDS; $a++) {
+    for ($a = 0; $a < ROUNDS; $a += 1) {
         $progression = makeProgression();
         $randomSymbol = rand(0, count($progression) - 1);
         $symbol = $progression[$randomSymbol];
@@ -26,7 +26,7 @@ function makeProgression()
     $progression = [];
     $startNumber = rand(1, 50);
     $diff = rand(1, 8);
-    for ($i = 1; $i < rand(6, 11); $i++) {
+    for ($i = 1; $i < rand(6, 11); $i += 1) {
         $progression[] = $startNumber + $i * $diff;
     }
     return $progression;
