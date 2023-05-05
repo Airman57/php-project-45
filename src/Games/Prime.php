@@ -24,7 +24,7 @@ function isPrime(int $num)
         return false;
     }
     for ($s = 2; $s < $num; $s += 1) {
-        if ($num % $s == 0 && $num !== 2) {
+        if ($num % $s == 0) {
             return false;
         }
     }
